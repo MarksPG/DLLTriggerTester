@@ -12,7 +12,7 @@ namespace TriggerTesterListener
         static void Main(string[] args)
         {
             TimeSpan interval = new TimeSpan(0, 0, 3);
-            var test = TriggerListenerFactory.CreateTransportType(TransportType.WcfBasic);
+            ITriggerListener test = TriggerListenerFactory.CreateTransportType(TransportType.WcfBasic);
             test.SetUp("TransportManager", 2);
 
             Console.WriteLine("TriggerListener has been initiated!");

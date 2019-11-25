@@ -13,11 +13,11 @@ namespace TriggerTesterListener
         {
             TimeSpan interval = new TimeSpan(0, 0, 3);
             ITriggerListener test = TriggerListenerFactory.CreateTransportType(TransportType.WcfBasic);
-            test.SetUp("TransportManager", 2);
+            test.SetUp("TruckLiftManager", 3);
 
             Console.WriteLine("TriggerListener has been initiated!");
                         
-            //Console.ReadKey();
+           
 
 
             while (true)
@@ -25,6 +25,11 @@ namespace TriggerTesterListener
                 if (!test.Wait(interval))
                 {
                     Console.WriteLine("No ping for 3 seconds");
+                }
+
+                else
+                {
+                    Console.WriteLine("Pinged!");
                 }
                
             }

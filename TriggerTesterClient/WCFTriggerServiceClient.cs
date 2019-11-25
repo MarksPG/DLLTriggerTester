@@ -18,14 +18,12 @@ public interface IWCFTriggerService
     [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWCFTriggerService/Ping", ReplyAction="http://tempuri.org/IWCFTriggerService/PingResponse")]
     void Ping();
     
-    //[System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWCFTriggerService/Ping", ReplyAction="http://tempuri.org/IWCFTriggerService/PingResponse")]
-    //System.Threading.Tasks.Task PingAsync();
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IWCFTriggerService/Ping", ReplyAction="http://tempuri.org/IWCFTriggerService/PingResponse")]
+    System.Threading.Tasks.Task PingAsync();
 }
 
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-#pragma warning disable CS0436 // Type conflicts with imported type
 public interface IWCFTriggerServiceChannel : IWCFTriggerService, System.ServiceModel.IClientChannel
-#pragma warning restore CS0436 // Type conflicts with imported type
 {
 }
 
@@ -63,8 +61,8 @@ public partial class WCFTriggerServiceClient : System.ServiceModel.ClientBase<IW
         base.Channel.Ping();
     }
     
-    //public System.Threading.Tasks.Task PingAsync()
-    //{
-    //    return base.Channel.PingAsync();
-    //}
+    public System.Threading.Tasks.Task PingAsync()
+    {
+        return base.Channel.PingAsync();
+    }
 }

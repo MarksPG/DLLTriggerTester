@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 using ElseTriggerHandler;
+using WCFServices;
 
 namespace TriggerTesterClient 
 {
@@ -31,13 +32,14 @@ namespace TriggerTesterClient
 
             for (int i = 0; i < 30; i++)
             {
-                WCFTriggerServiceClient client = new WCFTriggerServiceClient();
-                //var client = TriggerSenderFactory.CreateTransportType(TransportType.WcfBasic);
-                //string name = client.GetName("TransportManager", 2);
+                //WCFTriggerServiceClient client = new WCFTriggerServiceClient();
+                var client = TriggerSenderFactory.CreateTransportType(TransportType.WcfBasic);
+                string name = client.GetName("TruckLiftManager", 3);
 
 
                 Thread.Sleep(1000);
-                client.Ping();
+
+                client.Send(name);
                 
 
 

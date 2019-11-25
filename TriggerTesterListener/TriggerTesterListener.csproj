@@ -48,9 +48,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\..\ElseTriggerHandler\ElseTriggerHandler\ElseTriggerHandler.csproj">
       <Project>{6eb9d281-079b-4f43-9554-0007ebf54020}</Project>
       <Name>ElseTriggerHandler</Name>

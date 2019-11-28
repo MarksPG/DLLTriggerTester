@@ -23,12 +23,8 @@ namespace TriggerTesterClient
                 var client = TriggerSenderFactory.CreateTransportType(TransportType.Msmq);
                 string name = client.GetName("TruckLiftManager", 3);
 
-
                 Thread.Sleep(1000);
-
                 client.Send(name);
-                
-
 
                 Console.WriteLine();
                 Console.WriteLine("Pinged {0}", i);

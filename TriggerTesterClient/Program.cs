@@ -17,7 +17,7 @@ namespace TriggerTesterClient
             Console.WriteLine("Press a key to ping the listener!");
             Console.ReadKey(); 
 
-            for (int i = 0; i < 30; i++)
+            for (int i = 0; i < 50; i++)
             {
                 
                 var client = TriggerSenderFactory.CreateTransportType(TransportType.Msmq);
